@@ -14,10 +14,13 @@ def create_directories(PROJECT_NAME, CUSTOM_MODEL_NAME):
    
     # model information
     'PRETRAINED_MODEL_PATH': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'pre-trained-models'),
-    'LABELMAP': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations', 'label_map.pbtxt'),
     'CHECKPOINT_PATH': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'models', CUSTOM_MODEL_NAME),
-    'PIPELINE_CONFIG': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'models', CUSTOM_MODEL_NAME, 'pipeline.config'),
     'EXPORT_PATH': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'exported_models')
+  }
+  
+  files = {
+    'PIPELINE_CONFIG': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'models', CUSTOM_MODEL_NAME, 'pipeline.config'),
+    'LABELMAP': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations', 'label_map.pbtxt')
   }
  
   try:
@@ -25,7 +28,7 @@ def create_directories(PROJECT_NAME, CUSTOM_MODEL_NAME):
       os.makedirs(path, exist_ok=True)
 
     print("Successfully created environment directories")
-    return paths
+    return paths, files
 
   except:
     print("Error creating the environment directories")
