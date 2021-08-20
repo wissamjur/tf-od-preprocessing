@@ -7,7 +7,7 @@ def create_directories(PROJECT_NAME, CUSTOM_MODEL_NAME):
     # directories
     'WORKSPACE_PATH': os.path.join('TensorFlow', 'workspace'),
     'PROJECT_PATH': os.path.join('TensorFlow', 'workspace', PROJECT_NAME),
-    'APIMODEL_PATH': os.path.join('TensorFlow','models'),
+    'APIMODEL_PATH': os.path.join('TensorFlow', 'models'),
     'PROTOC_PATH': os.path.join('TensorFlow', 'prerequisites', 'protoc'),
     'SCRIPTS_PATH': os.path.join('TensorFlow', 'scripts'),
     'ANNOTATIONS_PATH': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations'),
@@ -20,7 +20,9 @@ def create_directories(PROJECT_NAME, CUSTOM_MODEL_NAME):
   
   files = {
     'PIPELINE_CONFIG': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'models', CUSTOM_MODEL_NAME, 'pipeline.config'),
-    'LABELMAP': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations', 'label_map.pbtxt')
+    'LABELMAP': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations', 'label_map.pbtxt'),
+    'TRAIN_SCRIPT' = os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'model_main_tf2.py'),
+    'EXPORT_SCRIPT' = os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'exporter_main_v2.py')
   }
  
   try:
