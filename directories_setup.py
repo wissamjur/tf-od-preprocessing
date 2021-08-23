@@ -21,8 +21,8 @@ def create_directories(PROJECT_NAME, CUSTOM_MODEL_NAME):
   files = {
     'PIPELINE_CONFIG': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'models', CUSTOM_MODEL_NAME, 'pipeline.config'),
     'LABELMAP': os.path.join('TensorFlow', 'workspace', PROJECT_NAME, 'annotations', 'label_map.pbtxt'),
-    'TRAIN_SCRIPT' = os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'model_main_tf2.py'),
-    'EXPORT_SCRIPT' = os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'exporter_main_v2.py')
+    'TRAIN_SCRIPT': os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'model_main_tf2.py'),
+    'EXPORT_SCRIPT': os.path.join('TensorFlow', 'models', 'research', 'object_detection', 'exporter_main_v2.py')
   }
  
   try:
