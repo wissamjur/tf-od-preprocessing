@@ -15,7 +15,7 @@ def write_config(PIPELINE_CONFIG, pipeline_config):
     with tf.io.gfile.GFile(PIPELINE_CONFIG, "wb") as f:                                                                                                                                                                                                                       
         f.write(config_text)
         
-def modify_config(PIPELINE_CONFIG, labels, TRAIN_BATCH_SIZE, paths, files):
+def modify_config(PRETRAINED_MODEL_NAME, PIPELINE_CONFIG, labels, TRAIN_BATCH_SIZE, paths, files):
   pipeline_config = read_config(PIPELINE_CONFIG)
 
   # pipeline configuration settings
